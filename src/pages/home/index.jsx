@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
-import "./App.scss";
+import logo from "../../assets/logo.svg";
+import "../../styles/App.css";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Go learn React right now !
         </a>
       </header>
     </div>

@@ -1,0 +1,63 @@
+$main-color: #FF6060;
+
+body {
+    font-family: Montserrat; 
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        a {
+            color: $main-color;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 10px;
+            &:hover {
+                text-decoration-line: underline; 
+            } 
+        }
+    }
+}
+
+.error {
+    color:$main-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-size: 200px;
+    }
+    p {
+        font-weight: 500;
+        font-size: 36px;
+    }
+    a {
+        color: $main-color;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        padding: 10px;
+    } 
+}
+
+footer {
+    background-color:black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        fill: white;
+        padding: 10px;
+    }
+    p {
+        color: white;
+    }
+}
+    
