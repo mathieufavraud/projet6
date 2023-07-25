@@ -1,12 +1,13 @@
 $main-color: #FF6060;
 
 body {
-    font-family: Montserrat; 
+    font-family: Montserrat;
 }
 nav {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    margin: 0px 20px;
     div {
         display: flex;
         justify-content: center;
@@ -23,6 +24,82 @@ nav {
             } 
         }
     }
+}
+
+main {
+    padding: 0px 10px;
+    margin: 0px 20px;
+    .banner {
+        height: 150px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        margin: 15px 0px;
+        border-radius: 25px;
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 500; 
+            padding: 50px;
+        }
+    }
+    .cardbox {
+        margin: 15px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        .card {
+            height: 400px;
+            width: 32%;
+            border-radius: 20px;
+            h1 {
+                color: white;
+                text-align:justify;
+                padding-top: 350px;
+                padding-left: 10px;
+                font-size: 18px;
+                font-weight: 500;  
+            }
+        }
+        
+    }
+    .collapse {
+        width: 80%;
+        button {
+            width: 100%;
+            background-color: $main-color;
+            font-size: 24px; 
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0px 10px;
+            border-radius: 10px;
+            .arrow {
+                transition: transform 0.3s ease;
+            }
+            .rotated {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
+            }
+        }
+        .hidden {
+            height: 0px;
+            overflow: hidden;
+            transition: height ease 0.5s;
+        }
+        .display {
+            height: 75px;
+            transition: height ease 0.5s;
+        }
+        .content {
+            background-color: lightgrey;
+            color: $main-color;
+            transition: height ease 0.5s;
+        }
+        
+    }   
 }
 
 .error {

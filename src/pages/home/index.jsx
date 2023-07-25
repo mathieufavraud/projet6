@@ -1,25 +1,21 @@
-import logo from "../../assets/logo.svg";
-import "../../styles/App.css";
+import Banner from "../../components/banner/banner.jsx";
+import Card from "../../components/card/card.jsx";
+import data from "../../logements.json";
+import "../../styles/index.scss";
 
-function App() {
+function CardBox() {
+  return data.map(place => {
+    return(<Card key={place.id} title={place.title} image={place.cover}></Card>)
+  })
+}
+
+function MainPage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Go learn React right now !
-        </a>
-      </header>
-    </div>
+    <main>
+      <div><Banner></Banner></div>
+      <div className="cardbox">{CardBox()}</div>
+    </main> 
   );
 }
 
-export default App;
+export default MainPage;
