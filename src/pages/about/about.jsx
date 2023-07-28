@@ -11,8 +11,8 @@ function AboutBox() {
 function About() {
     return (
         <main>
-            <Banner></Banner>
-            <div className="aboutbox">{AboutBox()}</div>
+            <section className="bannerbox"><Banner></Banner></section>
+            <section className="aboutbox">{AboutBox()}</section>
         </main>
     )
 }

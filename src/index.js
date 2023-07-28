@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styles/index.css";
 import Home from "./pages/home/index.jsx";
 import Error from "./pages/error/error.jsx";
-import Places from "./pages/places/places.jsx";
+import Place from "./pages/place/place.jsx";
 import About from "./pages/about/about.jsx";
 import Header from "./components/header/header.jsx";
 import Footer from "./components/footer/footer.jsx";
@@ -17,7 +17,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/places" element={<Places />} />
+        <Route path="/place/:placeId" element={<Place />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
