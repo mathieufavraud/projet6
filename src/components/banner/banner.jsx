@@ -1,14 +1,12 @@
-import background from "../../assets/banner.png";
+//import background from "../../assets/banner.png";
 
-function Banner () {
-    const css = {backgroundImage: `url(${background})`};
+function Banner (props) {
+    const css = {backgroundImage: `url(${props.image})`};
     return (
         <div className="banner" style={css}>
-            <h1>Chez vous partout et ailleurs</h1>
+            <h1>{props.text}</h1>
         </div>
     )
 }
 
 export default Banner;
-
-// <img src={background} alt="bannière"></img>

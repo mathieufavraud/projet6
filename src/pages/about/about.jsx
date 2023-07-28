@@ -1,5 +1,6 @@
 import Banner from "../../components/banner/banner.jsx";
 import Collapse from "../../components/collapse/collapse.jsx"
+import about from "../../assets/banner-about.png"
 import data from "../../about.json";
 
 function AboutBox() {
@@ -11,7 +12,7 @@ function AboutBox() {
 function About() {
     return (
         <main>
-            <section className="bannerbox"><Banner></Banner></section>
+            <section className="bannerbox"><Banner key="about" image={about}></Banner></section>
             <section className="aboutbox">{AboutBox()}</section>
         </main>
     )

@@ -1,5 +1,6 @@
 import Banner from "../../components/banner/banner.jsx";
 import Card from "../../components/card/card.jsx";
+import background from "../../assets/banner.png";
 import data from "../../logements.json";
 import { Link } from "react-router-dom";
 import "../../styles/index.scss";
@@ -17,7 +18,7 @@ function CardBox() {
 function MainPage() {
   return (
     <main>
-      <section className="bannerbox"><Banner></Banner></section>
+      <section className="bannerbox"><Banner key="banner" image={background} text="Chez vous, partout et ailleurs"></Banner></section>
       <section className="cardbox">{CardBox()}</section>
     </main> 
   );
@@ -25,4 +26,4 @@ function MainPage() {
 
 export default MainPage;
 
-//"places/{place.id}"
+//image={place.cover}
