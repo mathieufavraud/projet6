@@ -135,9 +135,11 @@ main {
         .slides {
             display: flex;
             position: relative;
+            width: 80%;
             img {
-                height: 500px;
+                height: 600px;
                 width: 100%;
+                object-fit: fill;
             }
             button {
                 cursor: pointer;
@@ -208,8 +210,56 @@ main {
                     }
                 }
             }
-            .place-infos-collapse {
-                //info collapse avec mise en page differente
+        }
+        .place-infos-collapse {
+            display: flex;
+            justify-content: center;
+            .collapse {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 15px;
+                button {
+                    width: 100%;
+                    height: 100px;
+                    background-color: $main-color;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500; 
+                    color: white;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px 15px;
+                    border-radius: 5px;
+                    .arrow {
+                        transition: transform 0.3s ease;
+                    }
+                    .rotated {
+                        transform: rotate(180deg);
+                        transition: transform 0.3s ease;
+                    }
+                }
+                .hidden {
+                    height: 0px;
+                    overflow: hidden;
+                    transition: height ease 0.5s;
+                }
+                .display {
+                    height: 75px;
+                    margin-bottom: 150px;
+                    transition: height ease 0.5s;
+                }
+                .content {
+                    background-color: lightgrey;
+                    color: $main-color;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 500;
+                    padding: 10px;
+                    transition: height ease 0.5s;
+                }
             }
         }
     }
@@ -256,3 +306,5 @@ footer {
     }
 }
     
+// factoriser le CSS
+// creer le responsive

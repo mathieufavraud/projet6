@@ -5,15 +5,7 @@ import Collapse from "../../components/collapse/collapse.jsx";
 import Tag from "../../components/tag/tag.jsx";
 import Rating from "../../components/rating/rating.jsx";
 
-/*
-function Tagsbox () {
-    return data.tags.map(tag => {
-        return (
-             <Tag key={tag} name={tag}></Tag>
-        )
-    })
-}
-*/
+//"<ul>"{place.equipments}"</ul>"
 
 function Tagsbox (place) {
     return place.tags.map(tag => {
@@ -26,6 +18,8 @@ function Tagsbox (place) {
 function Place () {
     const { placeId } = useParams();
     const place = data.find(elem => elem.id===placeId);
+    const equipement = place.equipments.map(item => <li>{item}</li>);
+    const content = <ul>{equipement}</ul>;
 
     return (
             <main>
@@ -47,8 +41,8 @@ function Place () {
                             </div>
                         </div>
                         <div className="place-infos-collapse">
-                            <Collapse key={place.id+2} title="Description" content={place.description}></Collapse>
-                            <Collapse key={place.id+3} title="Equipements"content={place.equipments}></Collapse>
+                            <Collapse key={place.description} title="Description" content={place.description}></Collapse>
+                            <Collapse key={place.equipments} title="Equipements" content={content}></Collapse>
                         </div>
                     </div>
                 </div>
