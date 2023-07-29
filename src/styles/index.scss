@@ -169,11 +169,26 @@ main {
                     font-style: normal;
                     font-weight: 500; 
                 }
-                p {
+                h2 {
                     font-size: 18px;
                     font-style: normal;
                     font-weight: 500;
                     margin: 0;
+                }
+                .tagsbox {
+                    list-style-type: none;
+                    li {
+                        display: flex;
+                        margin: 15px;
+                        ul {
+                            margin: 10px;
+                            padding: 10px 20px;
+                            text-align: center;
+                            border-radius: 10px;
+                            background-color: $main-color;
+                            color: white;
+                        }
+                    }
                 }
             }
             .place-infos-right {
@@ -192,6 +207,9 @@ main {
                         border-radius: 50%;
                     }
                 }
+            }
+            .place-infos-collapse {
+                //info collapse avec mise en page differente
             }
         }
     }
