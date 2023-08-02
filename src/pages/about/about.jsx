@@ -1,3 +1,5 @@
+//Page à propos, avec les composants collapse
+
 import Banner from "../../components/banner/banner.jsx";
 import Collapse from "../../components/collapse/collapse.jsx"
 import about from "../../assets/banner-about.png"

@@ -1,4 +1,4 @@
-//import background from "../../assets/banner.png";
+//Génération de la bannière
 
 function Banner (props) {
     const css = {backgroundImage: `url(${props.image})`};

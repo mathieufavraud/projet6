@@ -1,7 +1,8 @@
+//Génération des cartes de chaque appartement
+
 function Card (props) {
 
-    const css = {backgroundImage: `url(${props.image})`};
-    //erreur de syntaxe a corriger
+    const css = {backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.1),rgba(0,0,0,0.7)), url(${props.image})`};
 
     return (
         <div className="card" style={css}>
@@ -11,7 +12,3 @@ function Card (props) {
 }
 
 export default Card
-
-//const css = {backgroundImage: `linear-gradient(180deg, white,lightgrey), url(${props.image})`};
-
-//gradient sur les cartes a revoir

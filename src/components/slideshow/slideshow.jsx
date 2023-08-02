@@ -1,3 +1,5 @@
+//Génération du caroussel d'images
+
 import leftarrow from "../../assets/left-arrow.svg";
 import rightarrow from "../../assets/right-arrow.svg";
 import React, { useState } from 'react';
@@ -19,3 +21,5 @@ function Slideshow (props) {
 }
 
 export default Slideshow;
+
+//emplacement des numeros des slides

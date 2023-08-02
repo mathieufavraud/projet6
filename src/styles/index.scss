@@ -209,6 +209,13 @@ main {
                         border-radius: 50%;
                     }
                 }
+                .ratingbox {
+                    list-style-type: none;
+                    li {
+                        display: flex;
+                        margin: 10px;
+                    }
+                }
             }
         }
         .place-infos-collapse {
@@ -308,3 +315,5 @@ footer {
     
 // factoriser le CSS
 // creer le responsive
+// rajouter marge sous la bannière
+// format image slideshow

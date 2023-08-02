@@ -1,3 +1,5 @@
+// Génération de l'en tête de page
+
 import { Link } from "react-router-dom";
 import logo from "../../assets/KASA.svg";
 import "../../styles/index.scss";

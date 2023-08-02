@@ -1,11 +1,10 @@
+//Intégration de la librairie react
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./styles/index.css";
-import Home from "./pages/home/index.jsx";
-import Error from "./pages/error/error.jsx";
-import Place from "./pages/place/place.jsx";
-import About from "./pages/about/about.jsx";
+import Routeur from "./components/routeur/routeur.jsx";
 import Header from "./components/header/header.jsx";
 import Footer from "./components/footer/footer.jsx";
 import reportWebVitals from "./reportWebVitals";
@@ -15,12 +14,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/place/:placeId" element={<Place />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <Routeur></Routeur>
       <Footer />
     </BrowserRouter>
   </React.StrictMode>
@@ -30,6 +24,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-// <Route errorElement={<Error />} />
-// console.error(useRouteError())

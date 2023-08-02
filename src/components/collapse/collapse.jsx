@@ -1,3 +1,5 @@
+//Génération du composant d'affichage collapse
+
 import React, {useState} from "react";
 import arrow from "../../assets/arrow.svg";
 

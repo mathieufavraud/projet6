@@ -1,3 +1,5 @@
+// Génération du pied de page
+
 import logo from "../../assets/KASA white.svg";
 import "../../styles/index.scss";
 

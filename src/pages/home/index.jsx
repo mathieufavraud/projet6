@@ -1,3 +1,5 @@
+//Page principale, avec les cartes
+
 import Banner from "../../components/banner/banner.jsx";
 import Card from "../../components/card/card.jsx";
 import background from "../../assets/banner.png";
@@ -25,5 +27,3 @@ function MainPage() {
 }
 
 export default MainPage;
-
-//image={place.cover}
