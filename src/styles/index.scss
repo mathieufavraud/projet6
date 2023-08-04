@@ -2,33 +2,57 @@ $main-color: #FF6060;
 
 body {
     font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    a {
+        text-decoration: none;
+    }
 }
-nav {
+
+header {
     display: flex;
     justify-content: space-between;
+    margin: 0px 50px;
     padding: 10px;
-    margin: 0px 20px;
+    @media (max-width: 375px)
+    {
+        margin: 0px 10px;
+    }
+    img {
+        width: 210px;
+        @media (max-width: 375px)
+        {
+            width: 145px;
+        }
+    }
     div {
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         a {
             color: $main-color;
             font-size: 24px;
-            font-style: normal;
-            font-weight: 500;
             text-decoration: none;
-            padding: 10px;
+            padding: 30px;
             &:hover {
                 text-decoration-line: underline; 
             } 
+            @media (max-width: 375px)
+            {
+                font-size: 15px;
+                padding: 15px;
+            }
         }
     }
 }
 
 main {
+    margin: 0px 50px;
     padding: 0px 10px;
-    margin: 0px 20px;
+    @media (max-width: 375px)
+    {
+        margin: 0px 10px;
+    }
     .banner {
         height: 230px;
         background-repeat: no-repeat;
@@ -36,76 +60,117 @@ main {
         background-size: cover;
         background-color: lightgrey;
         background-blend-mode: multiply;
-        margin: 15px 0px;
+        margin: 30px 0px;
         border-radius: 25px;
-        h1 {
-            color: white;
-            text-align: center;
-            font-size: 48px;
-            font-weight: 500; 
-            padding: 80px;
+        span{
+            display: block;
+            h1 {
+                color: white;
+                text-align: center;
+                font-size: 48px;
+                padding: 80px;
+            }
+        }
+        @media (max-width: 375px)
+        {
+            height: 110px;
+            border-radius: 10px;
+            margin: 10px 0px;
+            span{
+                h1{
+                    padding: 20px;
+                    font-size: 24px;
+                    text-align: left;
+                }
+            }
         }
     }
     .cardbox {
         margin: 15px 0px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        background-color: F6F6F6;
         border-radius: 25px; 
-        padding: 15px;
-        a {
-            height: 400px;
+        background-color: F6F6F6;
+        padding: 30px;
+        @media (max-width: 375px)
+        {
             padding: 5px;
-            width: 32%;
-            text-decoration: none;
-            .card {
+        }
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            width: 100%;
+            a {
                 height: 400px;
-                border-radius: 20px;
-                background-image: linear-gradient(180deg, white,black);
-                //background-blend-mode: multiply;
-                h1 {
-                    color: white;
-                    text-align:justify;
-                    padding-top: 350px;
-                    padding-left: 10px;
-                    font-size: 18px;
-                    font-weight: 500;  
+                width: 32%;
+                .card {
+                    border-radius: 10px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    background-size: cover;
+                    h1 {
+                        color: white;
+                        text-align:justify;
+                        padding: 10px;
+                        font-size: 18px;
+                    }
                 }
             }
-        }  
+            @media (max-width: 375px)
+            {
+                a {
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+        }
     }
     .aboutbox{
+        padding: 0px 100px;
         margin: 50px 0px;
-        padding: 0px 50px;
-        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: 375px)
+        {
+                padding: 0px 10px;
+                margin: 10px 0px;
+        }
         .collapse {
             width: 100%;
             display: flex;
             flex-direction: column;
             margin: 15px;
+            @media (max-width: 375px)
+            {
+                    margin: 10px;
+            }
             button {
-                width: 100%;
-                height: 100px;
                 background-color: $main-color;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 500; 
                 color: white;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
                 padding: 0px 10px;
+                border: none;
                 border-radius: 5px;
+                h1{
+                    font-size: 24px;
+                }
                 .arrow {
                     transition: transform 0.3s ease;
+                    transform: rotate(180deg);
                 }
                 .rotated {
-                    transform: rotate(180deg);
                     transition: transform 0.3s ease;
+                }
+                @media (max-width: 375px)
+                {
+                    h1 {
+                        font-size: 12px;
+                    }
                 }
             }
             .hidden {
@@ -114,17 +179,18 @@ main {
                 transition: height ease 0.5s;
             }
             .display {
-                height: 75px;
+                height: 125px;
                 transition: height ease 0.5s;
             }
             .content {
                 background-color: lightgrey;
                 color: $main-color;
                 font-size: 22px;
-                font-style: normal;
-                font-weight: 500;
-                padding: 10px; 
-                transition: height ease 0.5s;
+                padding: 10px;
+                @media (max-width: 375px)
+                {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -132,13 +198,18 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 50px 0px;
         .slides {
             display: flex;
             position: relative;
-            width: 80%;
-            img {
+            width: 100%;
+            .slide-image {
                 height: 600px;
                 width: 100%;
+                object-fit: cover;
+            }
+            .slide-arrow {
+                height: 600px;
                 object-fit: fill;
             }
             button {
@@ -165,33 +236,14 @@ main {
             .place-infos-left {
                 display: flex;
                 flex-direction: column;
-                align-items: start;
                 h1 {
                     font-size: 36px;
-                    font-style: normal;
-                    font-weight: 500; 
                 }
                 h2 {
                     font-size: 18px;
-                    font-style: normal;
-                    font-weight: 500;
                     margin: 0;
                 }
-                .tagsbox {
-                    list-style-type: none;
-                    li {
-                        display: flex;
-                        margin: 15px;
-                        ul {
-                            margin: 10px;
-                            padding: 10px 20px;
-                            text-align: center;
-                            border-radius: 10px;
-                            background-color: $main-color;
-                            color: white;
-                        }
-                    }
-                }
+
             }
             .place-infos-right {
                 display: flex;
@@ -201,50 +253,73 @@ main {
                     align-items: center;
                     figcaption {
                         font-size: 18px;
-                        font-style: normal;
-                        font-weight: 500; 
                         padding: 15px;
                     }
                     img {
                         border-radius: 50%;
                     }
                 }
-                .ratingbox {
-                    list-style-type: none;
-                    li {
-                        display: flex;
-                        margin: 10px;
+            }
+        }
+        .place-infos-center {
+            display: flex;
+            justify-content: space-between;
+            .ratingbox {
+                list-style-type: none;
+                li {
+                    display: flex;
+                    margin: 10px;
+                    ul {
+                        padding: 15px;
+                        img {
+                            height: 36px;
+                        }
+                    }
+                }
+            }
+            .tagsbox {
+                list-style-type: none;
+                margin-top: 15px;
+                li {
+                    display: flex;
+                    ul {
+                        margin-right: 20px;
+                        padding: 15px 25px;
+                        text-align: center;
+                        font-size: 15px; 
+                        border-radius: 10px;
+                        background-color: $main-color;
+                        color: white;
                     }
                 }
             }
         }
         .place-infos-collapse {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
             .collapse {
-                width: 100%;
+                width: 45%;
                 display: flex;
                 flex-direction: column;
-                margin: 15px;
                 button {
-                    width: 100%;
-                    height: 100px;
                     background-color: $main-color;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 500; 
                     color: white;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
-                    padding: 0px 15px;
+                    padding: 0px 10px;
+                    border: none;
                     border-radius: 5px;
+                    h1{
+                        font-size: 24px;
+                    }
                     .arrow {
                         transition: transform 0.3s ease;
+                        transform: rotate(180deg);
                     }
                     .rotated {
-                        transform: rotate(180deg);
                         transition: transform 0.3s ease;
                     }
                 }
@@ -262,10 +337,7 @@ main {
                     background-color: lightgrey;
                     color: $main-color;
                     font-size: 22px;
-                    font-style: normal;
-                    font-weight: 500;
                     padding: 10px;
-                    transition: height ease 0.5s;
                 }
             }
         }
@@ -278,24 +350,37 @@ main {
     flex-direction: column;
     align-items: center;
     h1 {
-        font-size: 288px;
-        font-style: normal;
-        font-weight: 700;
-        margin: 120px;
+        font-size: 280px;
+        font-weight: 1000; 
+        margin: 80px;
     }
     p {
         font-size: 36px;
-        font-style: normal;
-        font-weight: 500; 
     }
     a {
         color: $main-color;
         font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
         padding: 10px;
-        margin: 120px;
+        margin: 80px;
     } 
+    a:hover {
+        text-decoration-line: underline; 
+    }
+    @media (max-width: 375px)
+    {
+        h1 {
+            font-size: 100px;
+            margin: 40px;
+        }
+        p {
+            font-size: 18px;
+            padding: 0px 60px; 
+        }
+        a {
+            font-size: 14px;
+            margin: 40px;
+        }
+    }
 }
 
 footer {
@@ -305,15 +390,22 @@ footer {
     flex-direction: column;
     align-items: center;
     img {
-        fill: white;
-        padding: 10px;
+        width: 120px;
+        padding: 20px;
     }
     p {
         color: white;
+        font-size: 24px;
     }
+    @media (max-width: 375px)
+    {
+        padding: 60px;
+        p {
+            font-size: 12px;
+        }
+    } 
 }
     
-// factoriser le CSS
-// creer le responsive
-// rajouter marge sous la bannière
 // format image slideshow
+
+//ameliorer animation collapse

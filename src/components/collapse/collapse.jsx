@@ -22,3 +22,10 @@ function Collapse(props) {
 export default Collapse;
 
 //animation a revoir ?
+
+/*
+            {state && (
+                <div className="content">{props.content}</div>
+                )
+            }
+*/

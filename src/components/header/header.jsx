@@ -6,13 +6,15 @@ import "../../styles/index.scss";
 
 function Header() {
   return (
-    <nav>
+    <header>
       <img src={logo} alt="logo KASA"></img>
-      <div>
-        <Link to="/">Accueil</Link>
-        <Link to="about">A Propos</Link>
-      </div>
-    </nav>
+      <nav>
+        <div>
+          <Link to="/">Accueil</Link>
+          <Link to="about">A Propos</Link>
+        </div>
+      </nav>
+    </header>
   );
 }
 

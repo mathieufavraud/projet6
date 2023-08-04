@@ -21,7 +21,7 @@ function MainPage() {
   return (
     <main>
       <section className="bannerbox"><Banner key="banner" image={background} text="Chez vous, partout et ailleurs"></Banner></section>
-      <section className="cardbox">{CardBox()}</section>
+      <section className="cardbox"><div>{CardBox()}</div></section>
     </main> 
   );
 }
