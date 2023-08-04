@@ -20,8 +20,8 @@ function CardBox() {
 function MainPage() {
   return (
     <main>
-      <section className="bannerbox"><Banner key="banner" image={background} text="Chez vous, partout et ailleurs"></Banner></section>
-      <section className="cardbox"><div>{CardBox()}</div></section>
+      <div className="bannerbox"><Banner key="banner" image={background} text="Chez vous, partout et ailleurs"></Banner></div>
+      <div className="cardbox"><div>{CardBox()}</div></div>
     </main> 
   );
 }

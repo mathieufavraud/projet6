@@ -46,29 +46,31 @@ function Place () {
 
         return (
                 <main>
-                    <section className="slidebox">
+                    <div className="slidebox">
                         <Slideshow key={place.id} pictures={place.pictures}></Slideshow>
-                    </section>
+                    </div>
                     <div className="place-infos">
                         <div className="place-infos-top">
                             <div className="place-infos-left">
                                 <h1>{place.title}</h1>
                                 <h2>{place.location}</h2>
+                                <div className="tagsbox">
+                                    <li>{Tagsbox(place)}</li>
+                                </div>
                             </div>
                             <div className="place-infos-right">
                                 <figure className="host">
                                     <figcaption>{place.host.name}</figcaption>
                                     <img src={place.host.picture} alt="propriétaire du logement" />
                                 </figure>
+                                <div className="ratingbox">
+                                    <li>{Ratingbox(stars)}</li>
+                                </div>
                             </div>
                         </div>
                         <div className="place-infos-center">
-                            <div className="tagsbox">
-                                <li>{Tagsbox(place)}</li>
-                            </div>
-                            <div className="ratingbox">
-                                <li>{Ratingbox(stars)}</li>
-                            </div>
+                            
+                        
                         </div>
                         <div className="place-infos-collapse">
                             <Collapse key={place.description} title="Description" content={place.description}></Collapse>
@@ -82,38 +84,4 @@ function Place () {
 
 export default Place;
 
-//changer les caracteristiques de l'image pour qu'elle s'etale dans une dimension fixe
-
-/*
-(
-    <main>
-        <div className="place">
-            <section className="slidebox">
-                <Slideshow key={place.id} pictures={place.pictures}></Slideshow>
-            </section>
-            <div className="place-infos">
-                <div className="place-infos-top">
-                    <div className="place-infos-left">
-                        <h1>{place.title}</h1>
-                        <h2>{place.location}</h2>
-                    <div className="tagsbox"><li>{Tagsbox(place)}</li></div>
-                </div>
-                <div className="place-infos-right">
-                    <figure className="host">
-                        <figcaption>{place.host.name}</figcaption>
-                        <img src={place.host.picture} alt="propriétaire du logement" />
-                    </figure>
-                    <div className="ratingbox">
-                        <li>{Ratingbox(stars)}</li>
-                    </div>
-                </div>
-                </div>
-                <div className="place-infos-collapse">
-                    <Collapse key={place.description} title="Description" content={place.description}></Collapse>
-                    <Collapse key={place.equipments} title="Equipements" content={content}></Collapse>
-                </div>
-            </div>
-        </div>
-    </main>
-)
-*/
+//cas d'un id non existant

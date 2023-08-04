@@ -14,8 +14,8 @@ function AboutBox() {
 function About() {
     return (
         <main>
-            <section className="bannerbox"><Banner key="about" image={about}></Banner></section>
-            <section className="aboutbox">{AboutBox()}</section>
+            <div className="bannerbox"><Banner key="about" image={about}></Banner></div>
+            <div className="aboutbox">{AboutBox()}</div>
         </main>
     )
 }
