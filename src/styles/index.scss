@@ -173,13 +173,13 @@ main {
                     }
                 }
             }
+            .display {
+                height: 100px;
+                transition: height ease 0.5s;
+            }
             .hidden {
                 height: 0px;
                 overflow: hidden;
-                transition: height ease 0.5s;
-            }
-            .display {
-                height: 125px;
                 transition: height ease 0.5s;
             }
             .content {
@@ -443,7 +443,6 @@ main {
         }
     }
 }
-
 .error {
     color:$main-color;
     display: flex;
@@ -482,7 +481,6 @@ main {
         }
     }
 }
-
 footer {
     background-color:black;
     padding: 20px;
