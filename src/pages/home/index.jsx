@@ -10,12 +10,12 @@ import "../../styles/index.scss";
 function CardBox() {
   return data.map(place => {
     return(
-      <Link to={"place/"+place.id}>
+      <Link key={`link${place.id}`} to={"place/"+place.id}> 
         <Card key={place.id} title={place.title} image={place.cover}></Card>
       </Link>
     )
   })
-}
+} 
 
 function MainPage() {
   return (
