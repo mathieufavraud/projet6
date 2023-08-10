@@ -7,7 +7,9 @@ import "../../styles/index.scss";
 function Header() {
   return (
     <header>
-      <img src={logo} alt="logo KASA"></img>
+      <Link to="/">
+        <img src={logo} alt="logo KASA"></img>
+      </Link>
       <nav>
         <div>
           <Link to="/">Accueil</Link>
