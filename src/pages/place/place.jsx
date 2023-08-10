@@ -3,9 +3,13 @@
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../../logements.json";
 import Slideshow from "../../components/slideshow/slideshow.jsx";
+import "../../components/slideshow/slideshow.scss";
 import Collapse from "../../components/collapse/collapse.jsx";
 import Tag from "../../components/tag/tag.jsx";
+import "../../components/tag/tag.scss";
 import Rating from "../../components/rating/rating.jsx";
+import "../../components/rating/rating.scss";
+import "./place.scss";
 import { useEffect } from "react";
 
 function Tagsbox (place) {

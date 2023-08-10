@@ -3,7 +3,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./styles/index.css";
+import "./styles/index.scss";
+import "./components/header/header.scss";
+import "./components/footer/footer.scss";
 import Routeur from "./components/routeur/routeur.jsx";
 import Header from "./components/header/header.jsx";
 import Footer from "./components/footer/footer.jsx";

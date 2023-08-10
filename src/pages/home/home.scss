@@ -1,0 +1,10 @@
+@import "../../styles/variables.scss";
+
+main {
+    margin: 0px 50px;
+    padding: 0px 10px;
+    @media (max-width: 375px)
+    {
+        margin: 0px 10px;
+    }
+}

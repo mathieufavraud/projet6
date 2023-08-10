@@ -1,11 +1,14 @@
 //Page principale, avec les cartes
 
 import Banner from "../../components/banner/banner.jsx";
+import "../../components/banner/banner.scss";
 import Card from "../../components/card/card.jsx";
+import "../../components/card/card.scss";
 import background from "../../assets/banner.png";
 import data from "../../logements.json";
 import { Link } from "react-router-dom";
 import "../../styles/index.scss";
+import "./home.scss";
 
 function CardBox() {
   return data.map(place => {

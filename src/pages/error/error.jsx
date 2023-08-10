@@ -1,6 +1,7 @@
 //Page erreur 404
 
 import { Link } from "react-router-dom";
+import "./error.scss";
 
 function NotFound() {
     return (
