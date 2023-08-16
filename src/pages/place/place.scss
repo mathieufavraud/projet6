@@ -69,6 +69,7 @@
     .place-infos-collapse {
         display: flex;
         justify-content: space-between;
+        gap: 30px;
         margin-bottom: 50px;
         @media (max-width: 375px)
         {

@@ -27,3 +27,5 @@ function Slideshow (props) {
 }
 
 export default Slideshow;
+
+// disparition des fleches et numero si une seule image cf dernier logement

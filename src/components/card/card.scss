@@ -12,11 +12,12 @@
     div {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
         width: 100%;
         a {
             height: 400px;
-            width: 32%;
+            width: 30%;
             .card {
                 border-radius: 10px;
                 height: 100%;
