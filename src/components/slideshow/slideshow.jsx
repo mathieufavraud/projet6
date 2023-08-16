@@ -11,7 +11,9 @@ function Slideshow (props) {
     return (
         <div className="slideshow">
             <div className="slides">
-                <div className="arrows">
+                {
+                    length>1 &&
+                    <div className="arrows">
                     <button onClick={() => setSlide(slide>0 ? slide-1 : length-1)}>
                         <img src={leftarrow} alt="fleche vers la gauche"/>
                     </button>
@@ -19,13 +21,15 @@ function Slideshow (props) {
                         <img src={rightarrow} alt="fleche vers la droite"/>
                     </button>
                 </div>
-                <img className="slide-image" src={props.pictures[slide]} alt="interieur de appartement" /> 
-                <p>{slide+1}/{length}</p>
+                }
+                <img className="slide-image" src={props.pictures[slide]} alt="interieur de appartement" />
+                {
+                    length>1 &&
+                    <p>{slide+1}/{length}</p>
+                }
             </div>
         </div>
     )
 }
 
 export default Slideshow;
-
-// disparition des fleches et numero si une seule image cf dernier logement
