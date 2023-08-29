@@ -16,7 +16,7 @@ function Collapse(props) {
                 </button>
             </div>
             <div className={state ? "display" : "hidden"}>
-                <div className={state ? "content-display" : "content-hidden"}>{props.content}</div>
+                <div className={state ? "content-display" : "content-hidden"}><p>{props.content}</p></div>
             </div>
         </div>     
     )

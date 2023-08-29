@@ -14,7 +14,8 @@ function AboutBox() {
     })
 }
 
-function About() {
+function About()
+{
     return (
         <main>
             <div className="bannerbox"><Banner key="about" image={about}></Banner></div>
