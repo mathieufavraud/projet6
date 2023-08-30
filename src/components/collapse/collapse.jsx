@@ -26,5 +26,3 @@ const Collapse = (props) => {
 }
 
 export default Collapse;
-
-//ajouter le <p>

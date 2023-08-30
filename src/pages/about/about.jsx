@@ -12,7 +12,8 @@ const About = () =>
 {
     const AboutBox = () => {
         return data.map(item => {
-            return(<Collapse key={item.id} title={item.title} content={item.content} classname={"collapse--marge"}></Collapse>)
+            let content = <p>{item.content}</p>
+            return(<Collapse key={item.id} title={item.title} content={content} classname={"collapse--marge"}></Collapse>)
         })
     }
     return (

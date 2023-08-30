@@ -73,11 +73,19 @@
         flex-wrap: wrap;
         gap: 30px;
         margin-bottom: 50px;
-        ul {
-            list-style-type: none;
-            margin: 0;
+        .collapse {
+            width: 45%;
+            @media (max-width: 800px)
+            {
+                width: 100%;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+            }
         }
-        @media (max-width: 375px)
+        
+        @media (max-width: 800px)
         {
             flex-direction: column;
             gap: 30px;   
