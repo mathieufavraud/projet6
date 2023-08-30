@@ -4,7 +4,7 @@ import leftarrow from "../../assets/left-arrow.svg";
 import rightarrow from "../../assets/right-arrow.svg";
 import React, { useState } from 'react';
 
-function Slideshow (props) {
+const Slideshow = (props) => {
     const [slide, setSlide] = useState(0);
     const length = props.pictures.length;
 

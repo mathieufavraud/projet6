@@ -8,14 +8,13 @@ import about from "../../assets/banner-about.png"
 import data from "../../about.json";
 import "./about.scss";
 
-function AboutBox() {
-    return data.map(item => {
-        return(<Collapse key={item.id} title={item.title} content={item.content} classname={"collapse--marge"}></Collapse>)
-    })
-}
-
-function About()
+const About = () =>
 {
+    const AboutBox = () => {
+        return data.map(item => {
+            return(<Collapse key={item.id} title={item.title} content={item.content} classname={"collapse--marge"}></Collapse>)
+        })
+    }
     return (
         <main>
             <div className="bannerbox"><Banner key="about" image={about}></Banner></div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/KASA.svg";
 import "../../styles/index.scss";
 
-function Header() {
+const Header = () => {
   return (
     <header>
       <Link to="/">

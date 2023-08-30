@@ -1,6 +1,6 @@
 // Génération de la liste de tags
 
-function Tag (props) {
+const Tag = (props) => {
     return (
         <ul>
             {props.name}

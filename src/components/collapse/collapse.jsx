@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import arrow from "../../assets/arrow.svg";
 
-function Collapse(props) {
+const Collapse = (props) => {
     const [state, setState] = useState(false);
 
     return (
@@ -16,10 +16,15 @@ function Collapse(props) {
                 </button>
             </div>
             <div className={state ? "display" : "hidden"}>
-                <div className={state ? "content-display" : "content-hidden"}><p>{props.content}</p></div>
+                <div className={state ? "content-display" : "content-hidden"}>
+                    {props.content}
+                </div>
+
             </div>
         </div>     
     )
 }
 
 export default Collapse;
+
+//ajouter le <p>

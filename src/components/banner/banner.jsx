@@ -1,6 +1,6 @@
 //Génération de la bannière
 
-function Banner (props) {
+const Banner = (props) => {
     const css = {backgroundImage: `url(${props.image})`};
     return (
         <div className="banner" style={css}>

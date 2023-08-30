@@ -5,6 +5,7 @@
     .place-infos-top {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         @media (max-width: 375px)
         {
             flex-direction: column;
@@ -69,6 +70,7 @@
     .place-infos-collapse {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 30px;
         margin-bottom: 50px;
         ul {

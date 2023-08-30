@@ -12,42 +12,41 @@ import "../../components/rating/rating.scss";
 import "./place.scss";
 import { useEffect } from "react";
 
-function Tagsbox (place) {
-    return place.tags.map((tag) => {
-        return (
-            <Tag key={tag} name={tag}></Tag>
-       )
-    })
-}
-
-function Ratingbox (rating) {
-    return rating.map((rank, i) => {
-        return (
-            <Rating key={`${rank}${i}`} display={rank}></Rating>
-        )
-    })
-}
-
-function Place () {
+const Place= () => {
     let { placeId } = useParams();
-    let place = data.find(elem => elem.id===placeId);
     let navigate = useNavigate();
-    let equipement = place?.equipments.map(item => <li key={item}>{item}</li>);
-    let content = <ul>{equipement}</ul>;
-    let stars = [false, false, false, false, false];
+    let place = data.find(elem => elem.id===placeId);
+    let content = <ul>{place?.equipments.map(item => <li key={item}>{item}</li>)}</ul>; // changer
 
-    for (let i=0; i<place?.rating; i++)
-    {
-        stars[i]=true;
-    }
-
-    useEffect(()=> {
+    useEffect(() => {
         if(place===undefined)
     {
         navigate("/error");
 
     }
     },[place, navigate])
+
+    const Tagsbox = (place) => {
+        return place.tags.map((tag) => {
+            return (
+                <Tag key={tag} name={tag}></Tag>
+           )
+        })
+    }
+
+    const Ratingbox = (place) => {
+        const stars = new Array(5);
+        stars.fill(false);
+        for (let i=0; i<place?.rating; i++)
+        {
+            stars[i]=true;
+        }
+        return stars.map((rank, i) => {
+            return (
+                <Rating key={`${rank}${i}`} display={rank}></Rating>
+            )
+        })
+    }
     
     return (
         place &&
@@ -70,7 +69,7 @@ function Place () {
                                 <img src={place.host.picture} alt="propriétaire du logement" />
                             </figure>
                             <div className="ratingbox">
-                                <li>{Ratingbox(stars)}</li>
+                                <li>{Ratingbox(place)}</li>
                             </div>
                         </div>
                     </div>

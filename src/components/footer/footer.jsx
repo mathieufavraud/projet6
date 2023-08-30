@@ -3,7 +3,7 @@
 import logo from "../../assets/KASA white.svg";
 import "../../styles/index.scss";
 
-function Footer () {
+const Footer = () => {
     return(
         <footer>
             <img src={logo} alt="logo KASA"></img>

@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 import "./error.scss";
 
-function NotFound() {
+const NotFound = () => {
     return (
         <div className="error">
             <h1>404</h1>

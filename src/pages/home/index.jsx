@@ -10,21 +10,22 @@ import { Link } from "react-router-dom";
 import "../../styles/index.scss";
 import "./home.scss";
 
-function CardBox() {
-  return data.map(place => {
-    return(
-      <Link key={`link${place.id}`} to={"place/"+place.id}> 
-        <Card key={place.id} title={place.title} image={place.cover}></Card>
-      </Link>
-    )
-  })
-} 
 
-function MainPage() {
+
+const MainPage = () => {
+  const CardBox = () => {
+    return data.map(place => {
+      return(
+        <Link key={`link${place.id}`} to={"place/"+place.id}> 
+          <Card key={place.id} title={place.title} image={place.cover}></Card>
+        </Link>
+      )
+    })
+  }
   return (
     <main>
       <div className="bannerbox"><Banner key="banner" image={background} text="Chez vous, partout et ailleurs"></Banner></div>
-      <div className="cardbox"><div>{CardBox()}</div></div>
+      <div className="cardbox">{CardBox()}</div>
     </main> 
   );
 }

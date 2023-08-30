@@ -6,7 +6,7 @@ import Error from "../../pages/error/error.jsx";
 import Place from "../../pages/place/place.jsx";
 import About from "../../pages/about/about.jsx";
 
-function Routeur () {
+const Routeur = () => {
  return(
     <Routes>
         <Route exact path="/" element={<Home />} />
