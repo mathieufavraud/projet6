@@ -2,9 +2,9 @@
 
 const Tag = (props) => {
     return (
-        <ul>
+        <li>
             {props.name}
-        </ul>
+        </li>
     )
 }
 

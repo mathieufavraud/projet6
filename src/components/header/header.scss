@@ -12,10 +12,10 @@ header {
         flex-wrap: nowrap;
     }
     img {
-        width: 210px;
+        max-width: 210px;
         @media (max-width: 375px)
         {
-            width: 145px;
+            max-width: 145px;
         }
     }
     div {

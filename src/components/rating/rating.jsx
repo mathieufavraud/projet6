@@ -7,17 +7,17 @@ function Rating (props) {
    if(props.display)
    {
       return (
-         <ul>
+         <li>
             <img src={star} alt="etoile" />
-         </ul>
+         </li>
        )
    }
    else
    {
       return (
-         <ul>
+         <li>
             <img src={emptystar} alt="etoile" />
-         </ul>
+         </li>
        )
    }
 }

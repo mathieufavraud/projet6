@@ -22,7 +22,6 @@ const Place= () => {
         if(place===undefined)
     {
         navigate("/error");
-
     }
     },[place, navigate])
 
@@ -57,10 +56,12 @@ const Place= () => {
                 <div className="place-infos">
                     <div className="place-infos-top">
                         <div className="place-infos-left">
-                            <h1>{place.title}</h1>
-                            <h2>{place.location}</h2>
+                            <div className="place-infos-title">
+                                <h1>{place.title}</h1>
+                                <h2>{place.location}</h2>
+                            </div>
                             <div className="tagsbox">
-                                <li>{Tagsbox(place)}</li>
+                                <ul>{Tagsbox(place)}</ul>
                             </div>
                         </div>
                         <div className="place-infos-right">
@@ -69,7 +70,7 @@ const Place= () => {
                                 <img src={place.host.picture} alt="propriétaire du logement" />
                             </figure>
                             <div className="ratingbox">
-                                <li>{Ratingbox(place)}</li>
+                                <ul>{Ratingbox(place)}</ul>
                             </div>
                         </div>
                     </div>

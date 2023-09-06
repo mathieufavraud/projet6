@@ -2,14 +2,15 @@
 
 .ratingbox {
     list-style-type: none;
-    li {
+    ul {
         display: flex;
+        list-style-type: none;
         margin: 10px;
         @media (max-width: 375px)
         {
             margin: 0px;
         }
-        ul {
+        li {
             padding: 15px;
             img {
                 height: 30px;
